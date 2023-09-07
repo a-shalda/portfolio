@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+:root {
+  --clr-light: ;
+  --clr-dark: ;
+  --background: hsla(175, 86%, 70%, 0.215);
+}
+
+.darkmode {
+  --clr-light: ;
+  --clr-dark: ;
+  --background: rgba(4, 4, 30, 0.787);
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -28,11 +40,12 @@ body {
   line-height: 1.5;
   font-family: Roboto, Tahoma;
   color: rgb(60, 60, 60);
-  transition: background-color 100ms;
+  transition: background-color 200ms;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   -webkit-tap-highlight-color: transparent;
+  background-color: var(--background);
 }
 
 main {
@@ -106,6 +119,9 @@ header {
 }
 .header__right__link--three--youtube {
   font-size: 1.8rem;
+}
+.header__left__button {
+  cursor: pointer;
 }
 
 footer {
