@@ -2,13 +2,15 @@
 :root {
   --clr-light: ;
   --clr-dark: ;
-  --background: hsla(175, 86%, 70%, 0.215);
+  --background: #efefef;
 }
 
 .darkmode {
   --clr-light: ;
   --clr-dark: ;
-  --background: rgba(4, 4, 30, 0.787);
+  --background: #020202;
+  color: white;
+  --theme-accent: hsla(200, 100%, 50%, 0.904);
 }
 
 *, *::before, *::after {
@@ -40,12 +42,12 @@ body {
   line-height: 1.5;
   font-family: Roboto, Tahoma;
   color: rgb(60, 60, 60);
-  transition: background-color 200ms;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   -webkit-tap-highlight-color: transparent;
   background-color: var(--background);
+  letter-spacing: 0.03rem;
 }
 
 main {
@@ -57,6 +59,12 @@ i {
      -moz-user-select: none;
           user-select: none;
   font-size: 1.5rem;
+  transition: color 100ms;
+}
+@media (hover: hover) {
+  i:hover {
+    color: var(--theme-accent);
+  }
 }
 
 img,
@@ -115,13 +123,24 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
+  height: 2rem;
+}
+@media (min-width: 29em) {
+  .header__right {
+    gap: 2rem;
+  }
 }
 .header__right__link--three--youtube {
   font-size: 1.8rem;
 }
 .header__left__button {
   cursor: pointer;
+}
+
+.main__greeting__hello {
+  font-size: 3rem;
+  font-weight: 500;
 }
 
 footer {

@@ -15,7 +15,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
+    height: 2rem;
+
+    @include breakpoint(small) {
+      gap: 2rem;
+    }
 
     &__link{
 
@@ -32,6 +37,17 @@ header {
 
     &__button {
       cursor: pointer;
+    }
+  }
+}
+
+.main {
+
+  &__greeting {
+
+    &__hello {
+      font-size: 3rem;
+      font-weight: 500;
     }
   }
 }

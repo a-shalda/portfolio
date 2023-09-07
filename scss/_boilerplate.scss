@@ -28,12 +28,13 @@ body {
   line-height: 1.5;
   font-family: $font;
   color: rgb(60, 60, 60);
-  transition: background-color 200ms;
+  // transition: background-color 100ms;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   -webkit-tap-highlight-color: transparent;
   background-color: var(--background);
+  letter-spacing: 0.03rem;
 }
 
 main {
@@ -43,6 +44,13 @@ main {
 i {
   user-select: none;
   font-size: 1.5rem;
+  transition: color 100ms;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--theme-accent);
+    }
+  }
 }
 
 img,

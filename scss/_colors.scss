@@ -1,11 +1,13 @@
 :root {
   --clr-light: ;
   --clr-dark: ;
-  --background: hsla(175, 86%, 70%, 0.215);
+  --background: #efefef;
 }
 
 .darkmode {
   --clr-light: ;
   --clr-dark: ;
-  --background: rgba(4, 4, 30, 0.787);
+  --background: #020202;
+  color: white;
+  --theme-accent: hsla(200, 100%, 50%, 0.904);
 }
