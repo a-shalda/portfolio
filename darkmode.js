@@ -3,23 +3,20 @@ let projectMockup = document.querySelector('.project_one__image');
 
 colorSchemeToggle.addEventListener('pointerdown', () => {
   document.body.classList.toggle('darkmode');
-  if (projectMockup === 'images/white.jpg') {
-    console.log('hey');
-    // document.querySelector('.project_one__image').src = 'images/black.jpg';
-  }
-  // else {
-  //   console.log('hey');
 
-  //   document.querySelector('.project_one__image').src = 'images/black.jpg';
-  // }
+  if (projectMockup.src === 'https://a-shalda.github.io/portfolio/images/white.jpg') {
+    document.querySelector('.project_one__image').src = 'https://a-shalda.github.io/portfolio/images/black.jpg';
+  }
+  else {
+    document.querySelector('.project_one__image').src = 'https://a-shalda.github.io/portfolio/images/white.jpg';
+  }
 })
 
 const useDark = window.matchMedia("(prefers-color-scheme: dark)");
 
 
-if (projectMockup.src === 'images/white.jpg') {
-  console.log('hey');
-  // document.querySelector('.project_one__image').src = 'images/black.jpg';
-}
 
-console.log(projectMockup.src);
+if (useDark) {
+  document.body.classList.toggle('darkmode');
+  document.querySelector('.project_one__image').src = 'https://a-shalda.github.io/portfolio/images/black.jpg';
+}
