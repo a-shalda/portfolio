@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul[role=list], ol[role=list] {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: Roboto, Tahoma;
+  color: rgb(60, 60, 60);
+  transition: background-color 100ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  -webkit-tap-highlight-color: transparent;
+}
+
+main {
+  flex-grow: 1;
+}
+
+i {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 1.5rem;
+}
+
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+:root {
+  --padding-block: 1rem;
+  --padding-inline: 1rem;
+}
+@media (min-width: 42.75em) {
+  :root {
+    --padding-inline: 1.5rem;
+  }
+}
+@media (min-width: 79em) {
+  :root {
+    --padding-inline: 2rem;
+  }
+}
+
+.cont {
+  width: 100%;
+  max-width: 90em;
+  margin: 0 auto;
+  padding-block: var(--padding-block);
+  padding-inline: var(--padding-inline);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+header {
+  background-color: rgba(159, 97, 97, 0.484);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.header__right__link--three--youtube {
+  font-size: 1.8rem;
+}
+
+footer {
+  background-color: rgba(159, 97, 97, 0.484);
+}
+
+.footer__desc__signature {
+  text-align: center;
+}
+.footer__desc__signature--icon {
+  font-size: 1rem;
+}/*# sourceMappingURL=styles.css.map */

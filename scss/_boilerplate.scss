@@ -1,0 +1,87 @@
+@use 'fonts' as *;
+@use 'breakpoints' as *;
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul[role="list"], ol[role="list"] {list-style: none;}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+html:focus-within {scroll-behavior: smooth;}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: $font;
+  color: rgb(60, 60, 60);
+  transition: background-color 100ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  -webkit-tap-highlight-color: transparent;
+}
+
+main {
+  // background-color: rgba(0, 0, 0, 0.006);
+  flex-grow: 1;
+}
+
+i {
+  user-select: none;
+  font-size: 1.5rem;
+}
+
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+:root {
+  --padding-block: 1rem;
+  --padding-inline: 1rem;
+
+  @include breakpoint (medium) {
+    --padding-inline: 1.5rem;
+  }
+
+  @include breakpoint (xlarge) {
+    --padding-inline: 2rem;
+  }
+}
+
+.cont {
+  width: 100%;
+  max-width: 90em;
+  margin: 0 auto;
+  padding-block: var(--padding-block);
+  padding-inline: var(--padding-inline);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
