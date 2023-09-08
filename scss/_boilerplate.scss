@@ -27,7 +27,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: $font;
-  color: rgb(60, 60, 60);
+  color: var(--color);
   // transition: background-color 100ms;
   display: flex;
   flex-direction: column;
@@ -65,17 +65,13 @@ picture {
   --padding-inline: 1rem;
 
   @include breakpoint (medium) {
-    --padding-inline: 1.5rem;
-  }
-
-  @include breakpoint (xlarge) {
     --padding-inline: 2rem;
   }
 }
 
 .cont {
   width: 100%;
-  max-width: 90em;
+  max-width: 84em;
   margin: 0 auto;
   padding-block: var(--padding-block);
   padding-inline: var(--padding-inline);

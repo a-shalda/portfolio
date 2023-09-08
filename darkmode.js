@@ -8,15 +8,14 @@ const imageBlack = document.querySelector('.main__project__one__image--black');
 colorSchemeToggle.addEventListener('pointerdown', () => {
   document.body.classList.toggle('darkmode');
   imageWhite.classList.toggle('main__project__one__image--hidden');
-
 })
 
 const useDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-// if (useDark) {
-//   document.body.classList.toggle('darkmode');
-//   imageWhite.classList.toggle('main__project__one__image--hidden');
-// }
+if (useDark) {
+  document.body.classList.toggle('darkmode');
+  imageWhite.classList.toggle('main__project__one__image--hidden');
+}
 
 const imageCont = document.querySelector('.main__project__one__image');
 
