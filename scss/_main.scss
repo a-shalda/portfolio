@@ -50,6 +50,29 @@ header {
       font-weight: 500;
     }
   }
+
+  &__project {
+
+    &__one {
+
+      &__image {
+        position: relative;
+
+        &--white {
+          position: absolute;
+          z-index: 1;
+        }
+
+        &--black {
+          position: absolute;
+        }
+
+        &--hidden {
+          z-index: 0;
+        }
+      }
+    }
+  }
 }
 
 

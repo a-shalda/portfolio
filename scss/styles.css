@@ -142,6 +142,19 @@ header {
   font-size: 3rem;
   font-weight: 500;
 }
+.main__project__one__image {
+  position: relative;
+}
+.main__project__one__image--white {
+  position: absolute;
+  z-index: 1;
+}
+.main__project__one__image--black {
+  position: absolute;
+}
+.main__project__one__image--hidden {
+  z-index: 0;
+}
 
 footer {
   background-color: rgba(159, 97, 97, 0.484);
