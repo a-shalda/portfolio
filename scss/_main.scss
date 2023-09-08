@@ -143,10 +143,11 @@ header {
       &__title {
         font-size: 2rem;
         font-weight: 500;
+        margin-bottom: 1.5rem;
       }
 
       &__stack {
-        padding-top: 1rem;
+        padding-top: 1.5rem;
         font-size: 1.2rem;
       }
 
@@ -190,6 +191,7 @@ header {
 
 footer {
   background-color: var(--header-footer);
+  margin-top: 3rem;
 }
 
 .footer {

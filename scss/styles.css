@@ -86,6 +86,9 @@ picture {
   max-width: 100%;
   height: auto;
   display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 :root {
@@ -262,9 +265,10 @@ header {
 .main__project__one__title {
   font-size: 2rem;
   font-weight: 500;
+  margin-bottom: 1.5rem;
 }
 .main__project__one__stack {
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   font-size: 1.2rem;
 }
 .main__project__one__text {
@@ -303,6 +307,7 @@ header {
 
 footer {
   background-color: var(--header-footer);
+  margin-top: 3rem;
 }
 
 .footer__desc__signature {
