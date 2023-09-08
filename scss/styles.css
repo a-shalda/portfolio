@@ -1,15 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 :root {
   --background: #efefef;
-  --theme-accent: #694FB0;
   --color: #3c3c3c;
-  --header-footer: hsla(257, 42%, 30%, 0.78);
+  --header-footer: hsla(258, 42%, 30%, 0.921);
+  --icon-highlight: hsla(258, 42%, 30%, 0.954);
+  --text-highlight: hsla(257, 42%, 30%, 0.78);
+  --text-highlight-color: #efefef;
 }
 
 .darkmode {
   --background: #020202;
   --color: #efefef;
   --header-footer: hsla(258, 42%, 30%, 0.954);
+  --icon-highlight: hsla(258, 37%, 36%, 0.885);
 }
 
 *, *::before, *::after {
@@ -19,11 +22,13 @@
 }
 
 ::-moz-selection {
-  background: var(--theme-accent);
+  background: var(--text-highlight);
+  color: var(--text-highlight-color);
 }
 
 ::selection {
-  background: var(--theme-accent);
+  background: var(--text-highlight);
+  color: var(--text-highlight-color);
 }
 
 ul[role=list], ol[role=list] {
@@ -61,17 +66,18 @@ main {
   flex-grow: 1;
 }
 
-i {
+header i {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   font-size: 1.5rem;
-  transition: color 100ms;
+  transition: color 200ms, background-color 200ms;
   color: white;
+  padding: 1rem;
 }
 @media (hover: hover) {
-  i:hover {
-    color: var(--theme-accent);
+  header i:hover {
+    background-color: var(--icon-highlight);
   }
 }
 
@@ -100,6 +106,13 @@ picture {
   padding-inline: var(--padding-inline);
 }
 
+.cont--header {
+  width: 100%;
+  max-width: 84em;
+  margin: 0 auto;
+  padding-inline: var(--padding-inline);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
@@ -124,17 +137,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 3.5rem;
 }
 .header__right {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
-  height: 2rem;
 }
 @media (min-width: 29em) {
   .header__right {
-    gap: 2rem;
+    gap: 1rem;
   }
 }
 .header__right__link--three--youtube {
@@ -276,12 +288,16 @@ header {
   padding-block: 1rem;
   padding-inline: 1.5rem;
   border: 1px solid var(--color);
-  transition: background-color 100ms;
+  transition: color 200ms, background-color 200ms;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 @media (hover: hover) {
   .main__project__one__buttons__visit:hover, .main__project__one__buttons__code:hover {
-    background-color: var(--theme-accent);
-    color: var(--background);
+    background-color: var(--header-footer);
+    color: var(--text-highlight-color);
+    border: 1px solid var(--header-footer);
   }
 }
 
@@ -295,11 +311,7 @@ footer {
 }
 .footer__desc__signature--icon {
   font-size: 1rem;
-}
-@media (hover: hover) {
-  .footer__desc__signature--icon {
-    color: var(--color);
-  }
+  color: white;
 }
 
 .img_unloaded {

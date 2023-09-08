@@ -13,17 +13,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  height: 3.5rem;
 
   &__right {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
-    height: 2rem;
 
     @include breakpoint(small) {
-      gap: 2rem;
+      gap: 1rem;
     }
 
     &__link{
@@ -174,12 +172,14 @@ header {
           padding-block: 1rem;
           padding-inline: 1.5rem;
           border: 1px solid var(--color);
-          transition: background-color 100ms;
+          transition: color 200ms, background-color 200ms;
+          user-select: none;
 
           @media (hover: hover) {
             &:hover {
-              background-color: var(--theme-accent);
-              color: var(--background);
+              background-color: var(--header-footer);
+              color: var(--text-highlight-color);
+              border: 1px solid var(--header-footer);
             }
           }
         }
@@ -187,8 +187,6 @@ header {
     }
   }
 }
-
-
 
 footer {
   background-color: var(--header-footer);
@@ -204,11 +202,7 @@ footer {
 
       &--icon {
         font-size: 1rem;
-        // color: white;
-
-        @media (hover: hover) {
-          color: var(--color);
-        }
+        color: white;
       }
     }
   }

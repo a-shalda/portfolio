@@ -2,7 +2,6 @@
 @use 'colors' as *;
 @use 'breakpoints' as *;
 
-
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +9,8 @@
 }
 
 ::selection {
-  background: var(--theme-accent);
+  background: var(--text-highlight);
+  color: var(--text-highlight-color);
 }
 
 ul[role="list"], ol[role="list"] {list-style: none;}
@@ -32,7 +32,6 @@ body {
   line-height: 1.5;
   font-family: $font;
   color: var(--color);
-  // transition: background-color 100ms;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -45,15 +44,16 @@ main {
   flex-grow: 1;
 }
 
-i {
+header i {
   user-select: none;
   font-size: 1.5rem;
-  transition: color 100ms;
+  transition: color 200ms, background-color 200ms;
   color: white;
+  padding: 1rem;
 
   @media (hover: hover) {
     &:hover {
-      color: var(--theme-accent);
+      background-color: var(--icon-highlight);
     }
   }
 }
@@ -79,6 +79,13 @@ picture {
   max-width: 84em;
   margin: 0 auto;
   padding-block: var(--padding-block);
+  padding-inline: var(--padding-inline);
+}
+
+.cont--header {
+  width: 100%;
+  max-width: 84em;
+  margin: 0 auto;
   padding-inline: var(--padding-inline);
 }
 
