@@ -3,13 +3,17 @@
 @use 'breakpoints' as *;
 
 header {
-  background-color: rgba(159, 97, 97, 0.484);
+  background-color: rgba(159, 97, 97, 0.78);
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 
   &__right {
     display: flex;
@@ -57,18 +61,89 @@ header {
 
       &__image {
         position: relative;
+        padding-block: 1rem;
+        height: 12rem;
+        display: flex;
+        justify-content: center;
 
-        &--white {
-          position: absolute;
-          z-index: 1;
+        @include breakpoint (tiny) {
+          height: 15rem;
+        }
+        @include breakpoint (small) {
+          height: 20rem;
+        }
+        @include breakpoint (medium) {
+          height: 30rem;
+        }
+        @include breakpoint (large) {
+          height: 40rem;
+        }
+        @include breakpoint (xlarge) {
+          height: 50rem;
         }
 
-        &--black {
+        &--white, &--black {
           position: absolute;
+          max-height: 12rem;
+
+          @include breakpoint (tiny) {
+            max-height: 15rem;
+          }
+          @include breakpoint (small) {
+            max-height: 20rem;
+          }
+          @include breakpoint (medium) {
+            max-height: 30rem;
+          }
+          @include breakpoint (large) {
+            max-height: 40rem;
+          }
+          @include breakpoint (xlarge) {
+            max-height: 50rem;
+          }
         }
+
 
         &--hidden {
-          z-index: 0;
+          z-index: -1;
+        }
+      }
+
+      &__title {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+
+      &__stack {
+        padding-top: 1rem;
+      }
+
+      &__text {
+        max-width: 70ch;
+      }
+
+      &__buttons {
+        margin-block: 1rem;
+        display: flex;
+        gap: 1rem;
+
+        &__visit {
+
+          border-radius: 0.5rem;
+          background-color: var(--theme-accent);
+          color: white;
+          padding-block: 1rem;
+          padding-inline: 1.5rem;
+
+        }
+
+        &__code {
+          border-radius: 0.5rem;
+          background-color: var(--theme-accent);
+          color: white;
+          padding-block: 1rem;
+          padding-inline: 1.5rem;
+
         }
       }
     }
@@ -79,6 +154,7 @@ header {
 
 footer {
   background-color: rgba(159, 97, 97, 0.484);
+
 }
 
 .footer {

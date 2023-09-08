@@ -3,6 +3,7 @@
   --clr-light: ;
   --clr-dark: ;
   --background: #efefef;
+  --theme-accent: hsla(200, 100%, 50%, 0.904);
 }
 
 .darkmode {
@@ -111,7 +112,10 @@ picture {
   }
 }
 header {
-  background-color: rgba(159, 97, 97, 0.484);
+  background-color: rgba(159, 97, 97, 0.78);
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 .header {
@@ -144,16 +148,96 @@ header {
 }
 .main__project__one__image {
   position: relative;
+  padding-block: 1rem;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
 }
-.main__project__one__image--white {
-  position: absolute;
-  z-index: 1;
+@media (min-width: 25em) {
+  .main__project__one__image {
+    height: 15rem;
+  }
 }
-.main__project__one__image--black {
+@media (min-width: 29em) {
+  .main__project__one__image {
+    height: 20rem;
+  }
+}
+@media (min-width: 42.75em) {
+  .main__project__one__image {
+    height: 30rem;
+  }
+}
+@media (min-width: 56.625em) {
+  .main__project__one__image {
+    height: 40rem;
+  }
+}
+@media (min-width: 79em) {
+  .main__project__one__image {
+    height: 50rem;
+  }
+}
+.main__project__one__image--white, .main__project__one__image--black {
   position: absolute;
+  max-height: 12rem;
+}
+@media (min-width: 25em) {
+  .main__project__one__image--white, .main__project__one__image--black {
+    max-height: 15rem;
+  }
+}
+@media (min-width: 29em) {
+  .main__project__one__image--white, .main__project__one__image--black {
+    max-height: 20rem;
+  }
+}
+@media (min-width: 42.75em) {
+  .main__project__one__image--white, .main__project__one__image--black {
+    max-height: 30rem;
+  }
+}
+@media (min-width: 56.625em) {
+  .main__project__one__image--white, .main__project__one__image--black {
+    max-height: 40rem;
+  }
+}
+@media (min-width: 79em) {
+  .main__project__one__image--white, .main__project__one__image--black {
+    max-height: 50rem;
+  }
 }
 .main__project__one__image--hidden {
-  z-index: 0;
+  z-index: -1;
+}
+.main__project__one__title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.main__project__one__stack {
+  padding-top: 1rem;
+}
+.main__project__one__text {
+  max-width: 70ch;
+}
+.main__project__one__buttons {
+  margin-block: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.main__project__one__buttons__visit {
+  border-radius: 0.5rem;
+  background-color: var(--theme-accent);
+  color: white;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
+}
+.main__project__one__buttons__code {
+  border-radius: 0.5rem;
+  background-color: var(--theme-accent);
+  color: white;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
 }
 
 footer {
