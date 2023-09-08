@@ -9,6 +9,10 @@
   padding: 0;
 }
 
+::selection {
+  background: var(--theme-accent);
+}
+
 ul[role="list"], ol[role="list"] {list-style: none;}
 
 a {
@@ -45,6 +49,7 @@ i {
   user-select: none;
   font-size: 1.5rem;
   transition: color 100ms;
+  color: white;
 
   @media (hover: hover) {
     &:hover {

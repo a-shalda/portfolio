@@ -1,17 +1,12 @@
 :root {
-  --clr-light: ;
-  --clr-dark: ;
   --background: #efefef;
-  --theme-accent: hsla(200, 100%, 50%, 0.904);
-  --color: rgb(60, 60, 60);
-
-
+  --theme-accent: #694FB0;
+  --color: #3c3c3c;
+  --header-footer: hsla(257, 42%, 30%, 0.78);
 }
 
 .darkmode {
-  --clr-light: ;
-  --clr-dark: ;
   --background: #020202;
-  --color: white;
-  --theme-accent: hsla(200, 100%, 50%, 0.904);
+  --color: #efefef;
+  --header-footer: hsla(258, 42%, 30%, 0.954);
 }

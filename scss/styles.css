@@ -1,24 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 :root {
-  --clr-light: ;
-  --clr-dark: ;
   --background: #efefef;
-  --theme-accent: hsla(200, 100%, 50%, 0.904);
-  --color: rgb(60, 60, 60);
+  --theme-accent: #694FB0;
+  --color: #3c3c3c;
+  --header-footer: hsla(257, 42%, 30%, 0.78);
 }
 
 .darkmode {
-  --clr-light: ;
-  --clr-dark: ;
   --background: #020202;
-  --color: white;
-  --theme-accent: hsla(200, 100%, 50%, 0.904);
+  --color: #efefef;
+  --header-footer: hsla(258, 42%, 30%, 0.954);
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+::-moz-selection {
+  background: var(--theme-accent);
+}
+
+::selection {
+  background: var(--theme-accent);
 }
 
 ul[role=list], ol[role=list] {
@@ -62,6 +67,7 @@ i {
           user-select: none;
   font-size: 1.5rem;
   transition: color 100ms;
+  color: white;
 }
 @media (hover: hover) {
   i:hover {
@@ -108,7 +114,7 @@ picture {
   }
 }
 header {
-  background-color: rgba(159, 97, 97, 0.78);
+  background-color: var(--header-footer);
   position: sticky;
   top: 0;
   z-index: 3;
@@ -170,7 +176,7 @@ header {
 .main__project__title {
   font-size: 2rem;
   font-weight: 900;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--color);
   margin-bottom: 3rem;
 }
 @media (min-width: 42.75em) {
@@ -257,7 +263,12 @@ header {
   margin-block: 2rem;
   display: flex;
   gap: 1rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+@media (min-width: 25em) {
+  .main__project__one__buttons {
+    font-size: 1.2rem;
+  }
 }
 .main__project__one__buttons__visit, .main__project__one__buttons__code {
   border-radius: 0.5rem;
@@ -270,15 +281,17 @@ header {
 @media (hover: hover) {
   .main__project__one__buttons__visit:hover, .main__project__one__buttons__code:hover {
     background-color: var(--theme-accent);
+    color: var(--background);
   }
 }
 
 footer {
-  background-color: rgba(159, 97, 97, 0.484);
+  background-color: var(--header-footer);
 }
 
 .footer__desc__signature {
   text-align: center;
+  color: white;
 }
 .footer__desc__signature--icon {
   font-size: 1rem;
