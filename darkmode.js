@@ -4,7 +4,6 @@ const imageWhite = document.querySelector('.main__project__one__image--white');
 const imageBlack = document.querySelector('.main__project__one__image--black');
 
 
-
 colorSchemeToggle.addEventListener('pointerdown', () => {
   document.body.classList.toggle('darkmode');
   imageWhite.classList.toggle('main__project__one__image--hidden');
@@ -38,4 +37,3 @@ imageContSecond.addEventListener('load', () => {
   imageCont.classList.remove('cont_blurred');
   console.log('second');
 })
-

@@ -9,7 +9,7 @@
 }
 
 .darkmode {
-  --background: #020202;
+  --background: #1b1b1b;
   --color: #efefef;
   --header-footer: hsla(258, 42%, 30%, 0.954);
   --icon-highlight: hsla(258, 37%, 36%, 0.885);
