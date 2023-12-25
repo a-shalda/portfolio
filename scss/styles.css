@@ -168,6 +168,7 @@ header {
 .main__greeting__buttons {
   display: flex;
   margin-left: -0.7rem;
+  gap: 1rem;
 }
 .main__greeting__buttons__link {
   width: 3rem;
