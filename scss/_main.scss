@@ -150,6 +150,16 @@ header {
       }
     }
 
+    &__details {
+      font-size: 1.1rem;
+      font-weight: 400;
+      max-width: 40ch;
+      letter-spacing: 0.05rem;
+      list-style-type: disc;
+      padding-left: 0.5rem;
+      margin-left: 0.9rem;
+    }
+
     &__about {
       font-size: 1.5rem;
       font-weight: 700;
@@ -161,13 +171,6 @@ header {
         font-weight: 900;
         margin-top: 1rem;
       }
-
-    &__details {
-      font-size: 1rem;
-      font-weight: 700;
-      max-width: 40ch;
-      letter-spacing: 0.8rem;
-    }
 
       @include breakpoint (medium) {
         font-size: 2rem;
@@ -194,7 +197,10 @@ header {
     }
 
     &__one {
-      padding-bottom: 3rem;
+
+      &:nth-of-type(1) {
+        padding-bottom: 4rem;
+      }
 
       &__title {
         font-size: 2rem;
@@ -235,7 +241,8 @@ header {
       }
 
       &__buttons {
-        margin-block: 2rem;
+        margin-top: 2rem;
+
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;

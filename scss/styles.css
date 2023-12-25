@@ -245,6 +245,15 @@ header {
     font-size: 3rem;
   }
 }
+.main__greeting__details {
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 40ch;
+  letter-spacing: 0.05rem;
+  list-style-type: disc;
+  padding-left: 0.5rem;
+  margin-left: 0.9rem;
+}
 .main__greeting__about {
   font-size: 1.5rem;
   font-weight: 700;
@@ -255,12 +264,6 @@ header {
   font-size: 2rem;
   font-weight: 900;
   margin-top: 1rem;
-}
-.main__greeting__about__details {
-  font-size: 1rem;
-  font-weight: 700;
-  max-width: 40ch;
-  letter-spacing: 0.8rem;
 }
 @media (min-width: 42.75em) {
   .main__greeting__about {
@@ -282,8 +285,8 @@ header {
     font-size: 2.5rem;
   }
 }
-.main__project__one {
-  padding-bottom: 3rem;
+.main__project__one:nth-of-type(1) {
+  padding-bottom: 4rem;
 }
 .main__project__one__title {
   font-size: 2rem;
@@ -319,7 +322,7 @@ header {
   }
 }
 .main__project__one__buttons {
-  margin-block: 2rem;
+  margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
