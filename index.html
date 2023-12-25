@@ -8,6 +8,7 @@
   <script src="https://kit.fontawesome.com/f2fb6ae114.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div id="stack"></div>
   <header>
     <section class="header cont--header">
       <div class="header__left">
@@ -15,17 +16,34 @@
           <i class="fa-solid fa-circle-half-stroke" aria-label="toggle dark mode"></i>
         </div>
       </div>
+      
+
       <div class="header__right">
-        <div class="header__right__link--one">
-          <!-- <a href="https://github.com/a-shalda" target="_blank">
-            <i class="fa-brands fa-github"></i>
-          </a> -->
-        </div>
-        <div class="header__right__link--two">
-          <!-- <a href="https://www.linkedin.com/in/a-shalda/" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-          </a> -->
-        </div>
+
+        <nav class="header__right__nav">
+          <ul class="header__right__nav__ul">
+
+            <li class="header__right__link--two">
+              <a href="#portfolio">
+                Portfolio
+              </a>
+            </li>
+
+            <li class="header__right__link--two">
+              <a href="#education">
+                Education
+              </a>
+            </li>
+
+            <li class="header__right__link--two">
+              <a href="#stack">
+                Stack
+              </a>
+            </li>
+  
+          </ul>
+        </nav>
+
       </div>
     </section>
   </header>
@@ -35,12 +53,10 @@
       <section class="main__greeting">
         <p class="main__greeting__hello">Hello, <span class="main__greeting__hello__span">I'm Alex 👋</span></p>
         <p class="main__greeting__about">I'm a Frontend Web Developer</p>
-        <p class="main__greeting__details">// React, HTML, CSS/SCSS, JavaScript</p>
-        <p class="main__greeting__details">// Node, Express, MongoDB, Mongoose</p>
-        <p class="main__greeting__details">// Cypress, Jest</p>
+        <p class="main__greeting__details">React, HTML, CSS/SCSS, JavaScript</p>
+        <p class="main__greeting__details">Node, Express, MongoDB, Mongoose</p>
+        <p class="main__greeting__details">Cypress, Jest</p>
         <div>
-          <p class="main__greeting__about--hire">Hire me</p>
-
           <div class="main__greeting__buttons">
             <a href="https://api.whatsapp.com/send?phone=79776511237" target="_blank" class="main__greeting__buttons__link">
               <i class="fa-brands main__greeting__buttons__link__icon fa-whatsapp"></i>
@@ -62,8 +78,9 @@
         
       </section>
 
-      <section class="main__project" id="portfolio">
-        <p class="main__project__title">PORTFOLIO</p>
+      <div class="main__project--link" id="portfolio"></div>
+      <section class="main__project">
+        <p class="main__project__title">Portfolio</p>
         <section class="main__project__one">
           <p class="main__project__one__title">Bricks eCommerce website</p>
           <p class="main__project__one__text">Choose from a variety of fasade bricks, effortlessly calculate packaging, send a pre-order for the chosen items. Client-side, backend only to receive orders. Design, development, content, SEO. </p>
@@ -75,8 +92,9 @@
           </div>
         </section>
 
+        <div class="main__project--link" id="education"></div>
         <section class="main__project__one">
-          <p class="main__project__one__title">Bloglist app</p>
+          <p class="main__project__one__title">Blogs app</p>
           <p class="main__project__one__text">Sign up and create links to blogs, vote for your favorite ones, post comments, see users' statistics, delete your blogs. May take a while to open, deployed on Render.com</p>
           <p class="main__project__one__stack">// React (Router, Redux Toolkit), Node, Express, MongoDB, Mongoose, Token authentication, Cypress, Jest</p>
 
@@ -86,7 +104,7 @@
           </div>
         </section>
 
-        <p class="main__project__title">EDUCATION</p>
+        <p class="main__project__title">Education</p>
         <a href="https://certificates.cs50.io/6e4c6fc3-2b94-414a-a125-5180e4ed4593.pdf?size=letter" class="main__project__one__edu" target="_blank">CS50x Introduction to Computer Science by Harvard University</a>
         <a href="https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/eb6172274b4571050a66fe1f9a5b0030" class="main__project__one__edu" target="_blank">Full Stack Open by Helsinki University</a>
       </section>

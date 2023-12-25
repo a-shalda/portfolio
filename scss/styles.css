@@ -4,6 +4,7 @@
   --color: #3c3c3c;
   --header-footer: hsla(258, 42%, 30%, 0.921);
   --icon-highlight: hsla(258, 42%, 30%, 0.954);
+  --edu-highlight: #efefef;
   --text-highlight: hsla(257, 42%, 30%, 0.78);
   --text-highlight-color: #efefef;
 }
@@ -13,12 +14,14 @@
   --color: #efefef;
   --header-footer: hsla(258, 42%, 30%, 0.954);
   --icon-highlight: hsla(258, 37%, 36%, 0.885);
+  --edu-highlight: #efefef;
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 ::-moz-selection {
@@ -64,21 +67,6 @@ body {
 
 main {
   flex-grow: 1;
-}
-
-header i {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  font-size: 1.5rem;
-  transition: color 200ms, background-color 200ms;
-  color: white;
-  padding: 1rem;
-}
-@media (hover: hover) {
-  header i:hover {
-    background-color: var(--icon-highlight);
-  }
 }
 
 img,
@@ -144,19 +132,50 @@ header {
 }
 .header__right {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+.header__right__nav__ul {
+  display: flex;
+  gap: 2rem;
 }
 @media (min-width: 29em) {
   .header__right {
     gap: 1rem;
   }
 }
-.header__right__link--three--youtube {
-  font-size: 1.8rem;
+.header__right__link--two a {
+  font-size: 1rem;
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: color 200ms, background-color 200ms;
+  color: white;
+  padding: 1rem;
 }
-.header__left__button {
+@media (hover: hover) {
+  .header__right__link--two a:hover {
+    background-color: var(--icon-highlight);
+  }
+}
+.header__left__button i {
   cursor: pointer;
+  font-size: 1.5rem;
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: color 200ms, background-color 200ms;
+  color: var(--color);
+  padding: 1rem;
+}
+@media (hover: hover) {
+  .header__left__button i:hover {
+    background-color: var(--icon-highlight);
+    color: var(--edu-highlight);
+  }
 }
 
 .main__greeting {
@@ -169,6 +188,7 @@ header {
   display: flex;
   margin-left: -0.7rem;
   gap: 1rem;
+  margin-top: 1.5rem;
 }
 .main__greeting__buttons__link {
   width: 3rem;
@@ -179,6 +199,19 @@ header {
 }
 .main__greeting__buttons__link__icon {
   font-size: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: color 200ms, background-color 200ms;
+  color: var(--color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+@media (hover: hover) {
+  .main__greeting__buttons__link__icon:hover {
+    background-color: var(--icon-highlight);
+    color: var(--edu-highlight);
+  }
 }
 .main__greeting__hello {
   font-size: 2rem;
@@ -197,6 +230,7 @@ header {
   font-size: 1.5rem;
   font-weight: 700;
   max-width: 40ch;
+  margin-bottom: 0.7rem;
 }
 .main__greeting__about--hire {
   font-size: 2rem;
@@ -207,21 +241,26 @@ header {
   font-size: 1rem;
   font-weight: 700;
   max-width: 40ch;
+  letter-spacing: 0.8rem;
 }
 @media (min-width: 42.75em) {
   .main__greeting__about {
     font-size: 2rem;
   }
 }
+.main__project--link {
+  height: 3.5rem;
+}
 .main__project__title {
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 500;
   border-bottom: 1px solid var(--color);
   margin-bottom: 3rem;
+  text-align: end;
 }
 @media (min-width: 42.75em) {
   .main__project__title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 .main__project__one {
@@ -244,10 +283,21 @@ header {
   display: block;
   font-size: 1.2rem;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem;
+  color: var(--color);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: color 200ms, background-color 200ms;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
-.main__project__one__edu:hover {
-  text-decoration: underline;
+@media (hover: hover) {
+  .main__project__one__edu:hover {
+    background-color: var(--icon-highlight);
+    color: var(--edu-highlight);
+    border-radius: 0.5rem;
+  }
 }
 .main__project__one__buttons {
   margin-block: 2rem;
