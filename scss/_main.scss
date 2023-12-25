@@ -152,6 +152,7 @@ header {
       &__buttons {
         margin-block: 2rem;
         display: flex;
+        flex-wrap: wrap;
         gap: 1rem;
         font-size: 1rem;
 
