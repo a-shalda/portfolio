@@ -183,6 +183,11 @@ header {
   font-weight: 700;
   max-width: 40ch;
 }
+.main__greeting__about__details {
+  font-size: 1rem;
+  font-weight: 700;
+  max-width: 40ch;
+}
 @media (min-width: 42.75em) {
   .main__greeting__about {
     font-size: 2rem;
@@ -198,69 +203,6 @@ header {
   .main__project__title {
     font-size: 3rem;
   }
-}
-.main__project__one__image {
-  position: relative;
-  height: 12rem;
-  display: flex;
-  justify-content: center;
-}
-@media (min-width: 25em) {
-  .main__project__one__image {
-    height: 15rem;
-  }
-}
-@media (min-width: 29em) {
-  .main__project__one__image {
-    height: 20rem;
-  }
-}
-@media (min-width: 42.75em) {
-  .main__project__one__image {
-    height: 30rem;
-  }
-}
-@media (min-width: 56.625em) {
-  .main__project__one__image {
-    height: 40rem;
-  }
-}
-@media (min-width: 79em) {
-  .main__project__one__image {
-    height: 50rem;
-  }
-}
-.main__project__one__image--white, .main__project__one__image--black {
-  position: absolute;
-  max-height: 12rem;
-}
-@media (min-width: 25em) {
-  .main__project__one__image--white, .main__project__one__image--black {
-    max-height: 15rem;
-  }
-}
-@media (min-width: 29em) {
-  .main__project__one__image--white, .main__project__one__image--black {
-    max-height: 20rem;
-  }
-}
-@media (min-width: 42.75em) {
-  .main__project__one__image--white, .main__project__one__image--black {
-    max-height: 30rem;
-  }
-}
-@media (min-width: 56.625em) {
-  .main__project__one__image--white, .main__project__one__image--black {
-    max-height: 40rem;
-  }
-}
-@media (min-width: 79em) {
-  .main__project__one__image--white, .main__project__one__image--black {
-    max-height: 50rem;
-  }
-}
-.main__project__one__image--hidden {
-  z-index: -1;
 }
 .main__project__one__title {
   font-size: 2rem;
@@ -317,25 +259,4 @@ footer {
 .footer__desc__signature--icon {
   font-size: 1rem;
   color: white;
-}
-
-.img_unloaded {
-  opacity: 0;
-}
-
-.cont_blurred {
-  background-color: var(--background);
-  animation: pulse 2.5s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0.2;
-  }
 }/*# sourceMappingURL=styles.css.map */
