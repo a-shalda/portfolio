@@ -25,7 +25,10 @@ header {
 
       &__ul {
         display: flex;
-        gap: 2rem;
+
+        @include breakpoint(small) {
+          gap: 2rem;
+        }
 
       }
     }
@@ -43,7 +46,16 @@ header {
         user-select: none;
         transition: color 200ms, background-color 200ms;
         color: white;
-        padding: 1rem;
+        padding-block: 1rem;
+        padding-inline: 0.3rem;
+
+        @include breakpoint(tiny) {
+          padding-inline: 0.6rem;
+        }
+
+        @include breakpoint(small) {
+          padding: 1rem;
+        }
       
         @media (hover: hover) {
           &:hover {
@@ -90,9 +102,12 @@ header {
 
     &__buttons {
       display: flex;
-      margin-left: -0.7rem;
       gap: 1rem;
       margin-top: 1.5rem;
+
+      @include breakpoint (medium) {
+        margin-left: -0.7rem;
+      }
 
       &__link {
         width: 3rem;
