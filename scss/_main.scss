@@ -137,6 +137,17 @@ header {
         font-size: 1.2rem;
       }
 
+      &__edu {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
       &__buttons {
         margin-block: 2rem;
         display: flex;

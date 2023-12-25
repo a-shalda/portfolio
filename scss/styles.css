@@ -239,6 +239,15 @@ header {
   max-width: 70ch;
   font-size: 1.2rem;
 }
+.main__project__one__edu {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.main__project__one__edu:hover {
+  text-decoration: underline;
+}
 .main__project__one__buttons {
   margin-block: 2rem;
   display: flex;
