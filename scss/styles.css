@@ -4,6 +4,7 @@
   --color: #3c3c3c;
   --header-footer: hsla(258, 42%, 30%, 0.921);
   --icon-highlight: hsla(258, 42%, 30%, 0.954);
+  --headline-highlight: hsl(257, 68%, 60%);
   --edu-highlight: #efefef;
   --text-highlight: hsla(257, 42%, 30%, 0.78);
   --text-highlight-color: #efefef;
@@ -363,4 +364,8 @@ footer {
 .footer__desc__signature--icon {
   font-size: 1rem;
   color: white;
+}
+
+.highlight {
+  color: var(--headline-highlight);
 }/*# sourceMappingURL=styles.css.map */
